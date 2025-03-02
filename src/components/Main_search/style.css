@@ -1,7 +1,10 @@
 .sidebar {
-  border-right: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
 }
+
 
 .loading-text {
   margin-left: 20px;
