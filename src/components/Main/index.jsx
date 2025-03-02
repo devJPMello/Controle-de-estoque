@@ -57,12 +57,10 @@ export default function Main() {
                 <div className="products-container">
                     {produtos.map(produto => (
                         <div key={produto._id} className="product-card">
-                            {/* Container fixo para a imagem */}
                             <div className="product-image-container">
                                 <img className="img-preview" src={produto.imagem} alt="product image" />
                             </div>
 
-                            {/* Informações do produto */}
                             <div className="product-info">
                                 <h2><a href={`/product/${produto._id}`}>{produto.nome}</a></h2>
                                 <p><strong>SKU:</strong> {produto.sku}</p>
