@@ -22,10 +22,10 @@ export default function ViewProduct() {
 
     const Quantidade = ({ qtdeProduto }) => {
         let qtdeProdutos = qtdeProduto.quantidade;
-    
+
         let statusText = '';
         let statusStyle = {};
-    
+
         if (qtdeProdutos == 0) {
             statusText = 'Sem estoque';
             statusStyle = { color: '#800' };
@@ -39,11 +39,11 @@ export default function ViewProduct() {
             statusText = 'Estoque cheio';
             statusStyle = { color: '#0f0', fontWeight: 'bold' };
         }
-    
+
         return (
             <h4 style={statusStyle}><span>{statusText}</span></h4>
         );
-    }  
+    }
 
     const handleDelete = () => {
         if (!window.confirm("Você tem certeza que deseja excluir este produto?")) {
@@ -67,13 +67,13 @@ export default function ViewProduct() {
 
     const handleAdjustStock = () => {
         // Verificar se algum campo obrigatório está vazio
-        if (!edicaoProduto.nome || !edicaoProduto.sku || !edicaoProduto.descricao || !edicaoProduto.quantidade || !edicaoProduto.marca || !edicaoProduto.preco || !edicaoProduto.cor || !edicaoProduto.imagem ) {
+        if (!edicaoProduto.nome || !edicaoProduto.sku || !edicaoProduto.descricao || !edicaoProduto.quantidade || !edicaoProduto.marca || !edicaoProduto.preco || !edicaoProduto.cor || !edicaoProduto.imagem) {
             // Encontra o primeiro campo vazio
             const camposFaltando = Object.keys(edicaoProduto).find(key => !edicaoProduto[key]);
 
             // Exibe um alerta informando ao usuário qual campo está faltando
             alert(`Por favor, preencha o campo "${camposFaltando}"!`);
-            
+
             // Retorna imediatamente para interromper o envio do formulário
             return;
         }
@@ -87,7 +87,7 @@ export default function ViewProduct() {
                 console.error("Erro ao atualizar produto:", error);
             });
 
-            navigate('/');
+        navigate('/');
     };
 
     return (
@@ -109,7 +109,7 @@ export default function ViewProduct() {
                         </div>
                         <div className="area-stock">
                             <div className="bar-code">
-                                <img src="/assets/codigo-de-barras.svg" alt="codigo-de-barras"/>
+                                <img src="/assets/codigo-de-barras.svg" alt="codigo-de-barras" />
                             </div>
                             <div className="stock-card">
                                 <div className="title-stock">
@@ -119,7 +119,7 @@ export default function ViewProduct() {
                                     <h3>ESTOQUE ATUAL</h3>
                                     <input type="number" name="quantidade" value={edicaoProduto.quantidade} onChange={handleChange} />
                                     <button onClick={handleAdjustStock}>Ajuste</button>
-                                    <h4>Status <Quantidade qtdeProduto={produto}  /></h4>
+                                    <h4>Status <Quantidade qtdeProduto={produto} /></h4>
                                 </div>
                             </div>
                             <div className="action-buttons">
@@ -130,10 +130,10 @@ export default function ViewProduct() {
 
                     <article className="article-list-product">
                         <ul className="list-product">
-                            <li>Valor   <div className="precoo"> <b>R$</b> <input type="number" name="preco" value={edicaoProduto.preco}  onChange={handleChange} /> </div> </li>
-                            <li>Marca           <input type="text" name="marca" value={edicaoProduto.marca}      onChange={handleChange} /></li>
-                            <li>Cor           <input type="text" name="cor"   value={edicaoProduto.cor}        onChange={handleChange} /></li>
-                            <li>Descrição     <textarea name="descricao"      value={edicaoProduto.descricao}  onChange={handleChange} /></li>
+                            <li>Valor   <div className="precoo"> <b>R$</b> <input type="number" name="preco" value={edicaoProduto.preco} onChange={handleChange} /> </div> </li>
+                            <li>Marca           <input type="text" name="marca" value={edicaoProduto.marca} onChange={handleChange} /></li>
+                            <li>Cor           <input type="text" name="cor" value={edicaoProduto.cor} onChange={handleChange} /></li>
+                            <li>Descrição     <textarea name="descricao" value={edicaoProduto.descricao} onChange={handleChange} /></li>
                         </ul>
                     </article>
                 </section>

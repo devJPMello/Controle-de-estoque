@@ -1,6 +1,6 @@
 .sidebar {
-  border-right: 2px solid #ddd; /* Linha de separação */
-  height: 100vh; /* Garante que a linha cubra toda a altura */
+  border-right: 2px solid #ddd;
+  height: 100vh;
 }
 
 .home-add {
@@ -20,17 +20,17 @@
   flex-direction: column;
 }
 
-.title > .div-input {
+.title>.div-input {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.div-input > label {
+.div-input>label {
   font-size: 30px;
 }
 
-.div-input > .add-input {
+.div-input>.add-input {
   height: 30px;
   font-size: 20px;
   border: none;
@@ -42,12 +42,12 @@
   border: none;
 }
 
-div > .sku-label {
+div>.sku-label {
   font-size: 20px;
   color: var(--grey-500);
 }
 
-.section-addProd > section > article > .product-img {
+.section-addProd>section>article>.product-img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,11 +55,11 @@ div > .sku-label {
   gap: 30px;
 }
 
-.product-img > input {
+.product-img>input {
   cursor: pointer;
 }
 
-.product-img > input:hover {
+.product-img>input:hover {
   border-bottom: 3px solid;
   transition: 0.1s none;
 }
@@ -71,12 +71,12 @@ div > .sku-label {
   border: none;
 }
 
-.input-list > ul > .div-input-list > label {
+.input-list>ul>.div-input-list>label {
   font-size: 25px;
   width: 300px;
 }
 
-.input-list > ul > .div-input-list > input {
+.input-list>ul>.div-input-list>input {
   border: none;
   font-size: 15px;
 }
@@ -97,14 +97,14 @@ div > .sku-label {
   justify-content: center;
 }
 
-.div-stock-input > label {
+.div-stock-input>label {
   margin-left: 30px;
   width: 90px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.div-stock-input > input {
+.div-stock-input>input {
   border: none;
   font-size: 20px;
 }
@@ -120,7 +120,7 @@ div > .sku-label {
     width: 70vw;
   }
 
-  .div-input > label {
+  .div-input>label {
     font-size: 23px;
     gap: 20px;
   }
@@ -136,16 +136,16 @@ div > .sku-label {
     width: 100vw;
   }
 
-  .title > .div-input {
+  .title>.div-input {
     margin-bottom: 20px;
   }
 
-  .div-input > label {
+  .div-input>label {
     font-size: 16px;
     width: 60px;
   }
 
-  .div-input > .add-input {
+  .div-input>.add-input {
     font-size: 14px;
     height: 20px;
     width: 70vw;
@@ -157,11 +157,11 @@ div > .sku-label {
     width: 70vw;
   }
 
-  div > .sku-label {
+  div>.sku-label {
     font-size: 16px;
   }
 
-  .section-addProd > section > article > .product-img {
+  .section-addProd>section>article>.product-img {
     width: 75vw;
     gap: 10px;
   }
@@ -171,12 +171,12 @@ div > .sku-label {
     font-size: 12px;
   }
 
-  .input-list > ul > .div-input-list > label {
+  .input-list>ul>.div-input-list>label {
     font-size: 18px;
     width: 60vw;
   }
 
-  .input-list > ul > .div-input-list > input {
+  .input-list>ul>.div-input-list>input {
     border: none;
     font-size: 15px;
   }
@@ -185,11 +185,11 @@ div > .sku-label {
     width: 290px;
   }
 
-  .div-stock-input > label {
+  .div-stock-input>label {
     font-size: 18px;
   }
 
-  .div-stock-input > input {
+  .div-stock-input>input {
     font-size: 16px;
   }
 }
@@ -199,11 +199,11 @@ div > .sku-label {
     gap: 0px;
   }
 
-  .div-input > label {
+  .div-input>label {
     width: 120px;
   }
 
-  .div-input > .add-input {
+  .div-input>.add-input {
     height: 20px;
     width: 70vw;
   }

@@ -1,33 +1,34 @@
 .sidebar {
-  border-right: 2px solid #ddd; /* Linha de separação */
+  border-right: 2px solid #ddd;
+  height: 100vh;
 }
 
 .loading-text {
-  margin-left: 20px; /* Ajuste a distância conforme necessário */
+  margin-left: 20px;
 }
 
 .products-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Agora são 5 colunas */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 1600px; /* Ajustei para suportar 5 colunas sem problemas */
+  max-width: 1600px;
   margin: 0 auto;
   padding: 20px;
 }
 
-article > h1 {
+article>h1 {
   font-weight: 400;
   font-size: 30px;
   color: black;
   margin-left: 20px;
 }
 
-h1 > span {
+h1>span {
   color: var(--blue-100);
 }
 
-/* Estrutura do Card */
+
 .product-card {
   background: #ffffff;
   border-radius: 12px;
@@ -41,16 +42,16 @@ h1 > span {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-width: 370px; /* Ajustei para acomodar 5 cards */
+  min-width: 370px;
   height: 400px;
 }
 
-/* Efeito Hover */
+
 .product-card:hover {
   transform: scale(1.05);
 }
 
-/* Container fixo para a imagem */
+
 .product-image-container {
   width: 100%;
   height: 220px;
@@ -61,7 +62,7 @@ h1 > span {
   border-bottom: 2px solid #ddd;
 }
 
-/* Imagem do produto */
+
 .product-image-container img {
   width: 100%;
   height: 100%;
@@ -69,7 +70,7 @@ h1 > span {
   padding: 10px;
 }
 
-/* Informações do produto */
+
 .product-info {
   padding: 15px;
   text-align: center;
@@ -94,27 +95,31 @@ h1 > span {
   color: #555;
 }
 
-/* Responsividade */
+
 @media screen and (max-width: 1280px) {
   .products-container {
-      grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas médias */
+    grid-template-columns: repeat(4, 1fr);
+
   }
 }
 
 @media screen and (max-width: 1024px) {
   .products-container {
-      grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas menores */
+    grid-template-columns: repeat(3, 1fr);
+
   }
 }
 
 @media screen and (max-width: 768px) {
   .products-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    grid-template-columns: repeat(2, 1fr);
+
   }
 }
 
 @media screen and (max-width: 480px) {
   .products-container {
-      grid-template-columns: repeat(1, 1fr); /* 1 coluna no mobile */
+    grid-template-columns: repeat(1, 1fr);
+
   }
 }

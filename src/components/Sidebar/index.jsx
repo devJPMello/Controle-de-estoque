@@ -13,9 +13,9 @@ export default function Sidebar() {
                         <a href="/" title="Home">Home</a>
                     </li>
                     <h4>INVENTÁRIO</h4>
-                    
+
                     <li>
-                        <a  className="cub-icon" href="/add-product"><BsBox /></a>
+                        <a className="cub-icon" href="/add-product"><BsBox /></a>
                         <a href="/add-product">Adicionar produto</a>
                     </li>
                 </ul>
