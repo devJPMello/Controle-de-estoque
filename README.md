@@ -17,37 +17,9 @@ O projeto foi prototipado no Figma e todo o front-end foi desenvolvido utilizand
 - Visualização dos produtos cadastrados.
 - Alerta de estoque baixo.
 
-## Design no Figma
-
-Para acessar o projeto no Figma e conferir a tipografia e paletas de cores utilizadas, [clique aqui](https://www.figma.com/file/m4d3UCMj9tanzaDx6I9k72/Sistema-de-gerenciamento-de-estoque?type=design&node-id=0%3A1&mode=design&t=Td2BPv7sRs0QDZRp-1).
-
 ## Tecnologias Utilizadas
 
 - React
 - JavaScript (ES6+)
 - Vite
 - MongoDB (para hospedagem do banco de dados)
-
-## Capturas de Tela
-
-*Tela de Inicio Home*
-![image](https://github.com/BrennonMeireles/controle-estoque-react/assets/141636246/73896ed2-dc6d-4ece-b5b1-b477b5c92842)
-
-
-*Tela de Visualização do Produto*
- ![image](https://github.com/BrennonMeireles/controle-estoque-react/assets/141636246/021c07c5-054a-444d-a838-dc179ead5186)
-
-*Tela de Cadastro de Produtos*
-![image](https://github.com/BrennonMeireles/controle-estoque-react/assets/141636246/22379f05-89e2-4df4-81c7-86dfab1f943e)
-
-
-## Como Contribuir
-
-Se deseja contribuir com este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## Autor
-
-Este projeto foi desenvolvido por Brennon, Gabriel e Anderson e seus colegas como parte do curso de Desenvolvimento de Sistemas do SENAI.
-
----
-****
