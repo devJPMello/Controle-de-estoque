@@ -4,7 +4,7 @@ import "./style.css";
 import { useNavigate } from 'react-router-dom';
 
 export default function AddNew() {
-    const navigate = useNavigate(); // Inicialize useHistory
+    const navigate = useNavigate(); 
 
     const [produto, setProduto] = useState({
         nome: '',
@@ -17,33 +17,26 @@ export default function AddNew() {
         imagem: ''
     });
 
-    // Função para lidar com mudanças nos campos de formulário
     const handleChange = (e) => {
-        // Extrai o nome e o valor do campo de formulário que acionou o evento
         const { name, value } = e.target;
 
-        // Atualiza o estado 'produto' com as novas informações do campo de formulário
-        // Clona o objeto 'produto' existente e atualiza a propriedade 'name' com o valor 'value
         setProduto({ ...produto, [name]: value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Verifica se algum campo está vazio
         if (!produto.nome || !produto.sku || !produto.descricao || !produto.quantidade || !produto.marca || !produto.preco || !produto.cor || !produto.imagem) {
-            // Encontra o primeiro campo vazio
+
             const camposFaltando = Object.keys(produto).find(key => !produto[key]);
-            // Exibe um alerta informando ao usuário qual campo está faltando
             alert(`Por favor, preencha o campo "${camposFaltando}"!`);
-            // Retorna imediatamente para interromper o envio do formulário
 
             return;
         }
         try {
             const response = await axios.post('https://api-estoque-rh46.onrender.com/', produto); // criando o post pelo axios
             console.log('Produto adicionado:', response.data);
-            // Limpar os campos do formulário após o envio bem-sucedido, se necessário
+
             setProduto({
                 nome: '',
                 sku: '',
@@ -55,8 +48,7 @@ export default function AddNew() {
                 imagem: ''
             });
 
-            // Redireciona para a página inicial após o envio bem-sucedido
-            navigate('/'); // Redireciona para a página inicial
+            navigate('/'); 
         } catch (error) {
             alert('Erro ao adicionar produto:', error, '. Tente novamente');
 
@@ -82,7 +74,8 @@ export default function AddNew() {
                 <article className="banner-stock">
                     <div className="product-img">
                         <img width="50px" height="50px" src="/assets/upload_icon.svg" alt="imagem icon de upload" />
-                        <input className="add-input-upload" type="text" name="imagem" value={produto.imagem} onChange={handleChange} placeholder="Paste here the image URL" required />
+                        <input className="add-input-upload" type="text" name="imagem" value={produto.imagem} 
+                        onChange={handleChange} placeholder="Cole aqui o URL da imagem" required />
                     </div>
                     <div className="area-stock">
                         <div className="bar-code">
@@ -102,7 +95,6 @@ export default function AddNew() {
                             </div>
                         </div>
                         <div className="action-buttons">
-                            {/* Adicionei o evento onClick para chamar a função handleSubmit quando o botão for clicado */}
                             <button className="btn-add" onClick={handleSubmit}>Adicionar Produto</button>
                         </div>
                     </div>
